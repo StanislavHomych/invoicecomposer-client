@@ -1,0 +1,27 @@
+{
+  "name": "Invoice Composer - Free Online Invoice Generator",
+  "short_name": "Invoice Composer",
+  "description": "Create professional invoices online for free. Generate PDF invoices for any country with automatic tax calculations.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#46c861",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "finance"],
+  "lang": "en",
+  "dir": "ltr"
+}

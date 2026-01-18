@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dashboard
+Disallow: /company
+Disallow: /clients
+Disallow: /invoices/
+Disallow: /login
+Disallow: /register
+
+# Sitemap
+Sitemap: https://invoicecomposer.com/sitemap.xml
+
+# RSS Feed
+Allow: /rss.xml
+
+# Crawl-delay
+Crawl-delay: 1
