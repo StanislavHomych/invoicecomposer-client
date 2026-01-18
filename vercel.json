@@ -30,7 +30,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!assets/).*)",
+      "source": "/((?!assets|favicon|apple-touch-icon|site.webmanifest|browserconfig.xml|vite.svg|robots.txt|ads.txt).*)",
       "destination": "/index.html"
     }
   ]
