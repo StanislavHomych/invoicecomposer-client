@@ -1,6 +1,8 @@
-// Use relative path to leverage Vite proxy, or full URL if VITE_API_URL is set
-// In production on Vercel, use relative path /api
-const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api' : '');
+// Use environment variable for API URL
+// In development, use relative path to leverage Vite proxy (empty string = relative)
+// In production, use VITE_API_URL if set (for separate deployments), otherwise use relative path
+// For separate client/server deployments, set VITE_API_URL to your server URL
+const API_URL = import.meta.env.VITE_API_URL || '';
 
 export interface ApiError {
   error: string;
