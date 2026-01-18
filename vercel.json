@@ -30,7 +30,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!assets|favicon|apple-touch-icon|site.webmanifest|browserconfig.xml|vite.svg|robots.txt|ads.txt|.*\\.(png|jpg|jpeg|gif|svg|ico|webmanifest|xml|txt)).*)",
+      "source": "/((?!.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webmanifest|xml|txt|json)).*)",
       "destination": "/index.html"
     }
   ]
