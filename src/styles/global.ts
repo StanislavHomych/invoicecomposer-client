@@ -54,70 +54,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0 !important;
   }
 
-  h1 {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-    font-size: 32px;
-  }
-
-  h2 {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-    font-size: 24px;
-  }
-
-  h3 {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-    font-size: 20px;
-  }
-
-  h4, h5, h6 {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  p {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  span {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  div {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  label {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  a {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-    text-decoration: none;
-  }
-
-  th, td, li, ul, ol {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
   button {
     font-family: inherit;
   }
@@ -150,72 +86,9 @@ export const GlobalStyle = createGlobalStyle`
     color: #9ca3af;
   }
 
-  option {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    background: #1f1f1f;
-    color: #ffffff;
-  }
 
-  button {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  /* Для всіх svg іконок на темному фоні */
-  svg {
-    color: #ffffff;
-  }
-
-  /* Забезпечуємо правильний колір для всіх елементів на темному фоні */
-  article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  /* Переконаємося, що всі текстові елементи світлі */
-  small {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  strong {
-    font-family: var(--font-family) !important;
-    font-weight: 400;
-    color: #ffffff;
-  }
-
-  em {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  code, pre, blockquote {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  /* Для таблиць */
-  table {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  thead, tbody, tfoot {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
-  }
-
-  tr {
-    font-family: var(--font-family) !important;
-    font-weight: 300;
-    color: #ffffff;
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 `;
