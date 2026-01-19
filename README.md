@@ -26,8 +26,6 @@ npm run build
 
 ## 📦 Деплой на Vercel
 
-Детальні інструкції дивіться в [DEPLOYMENT_STEPS.md](../DEPLOYMENT_STEPS.md) або [CLIENT_DEPLOY.md](../CLIENT_DEPLOY.md)
-
 ### Швидкий деплой
 
 1. Пуште код в GitHub репозиторій
@@ -35,11 +33,34 @@ npm run build
 3. Додайте environment variable: `VITE_API_URL` (URL вашого серверного додатку)
 4. Deploy!
 
+### Детальна інструкція
+
+1. **Створіть проект на Vercel:**
+   - Перейдіть на https://vercel.com
+   - Імпортуйте ваш GitHub репозиторій
+   - Framework Preset: **Vite** (визначиться автоматично)
+   - Root Directory: залиште порожнім
+
+2. **Налаштуйте Environment Variables:**
+   ```
+   VITE_API_URL=https://your-server-app.vercel.app
+   ```
+   ⚠️ Замініть на URL вашого серверного додатку
+
+3. **Deploy!**
+   - Vercel автоматично виконає build при кожному push в main branch
+
 ## 🔧 Environment Variables
 
 ### Development
 
-Створіть `.env.local`:
+Створіть `.env.local` (скопіюйте з `.env.example`):
+
+```bash
+cp .env.example .env.local
+```
+
+Або створіть вручну:
 
 ```
 VITE_API_URL=http://localhost:5001
@@ -47,7 +68,7 @@ VITE_API_URL=http://localhost:5001
 
 ### Production
 
-Встановіть в Vercel Dashboard:
+Встановіть в Vercel Dashboard → Settings → Environment Variables:
 
 ```
 VITE_API_URL=https://your-server-app.vercel.app
@@ -65,7 +86,8 @@ client/
 │   ├── styles/      # Глобальні стилі
 │   └── utils/       # Утиліти
 ├── public/          # Статичні файли
-└── vercel.json      # Vercel конфігурація
+├── vercel.json      # Vercel конфігурація
+└── .env.example     # Приклад environment variables
 ```
 
 ## 🛠️ Технології
@@ -76,3 +98,9 @@ client/
 - Redux Toolkit
 - React Router
 - Styled Components
+
+## 📝 Примітки
+
+- Для локальної розробки використовується Vite proxy (налаштовано в `vite.config.ts`)
+- Для production встановіть `VITE_API_URL` з URL вашого серверного додатку
+- SPA роутинг налаштовано через `vercel.json`
