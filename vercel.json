@@ -52,7 +52,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!assets|site\\.webmanifest|browserconfig\\.xml|robots\\.txt|ads\\.txt|.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webmanifest|xml|txt|json)).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
