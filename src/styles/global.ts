@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
   :root {
     color-scheme: dark;
     --evernote-green: #4ade80;
@@ -23,10 +21,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-family) !important;
-  }
-
-  html {
-    color: var(--text-primary);
   }
 
   html {
