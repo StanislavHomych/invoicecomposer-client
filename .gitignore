@@ -44,9 +44,7 @@ Thumbs.db
 .classpath
 .settings/
 *.sublime-project
-*.sublime-workspace
-
-# Testing
+*.sublime-workspace# Testing
 coverage/
 .nyc_output/
 

@@ -52,7 +52,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!api|uploads|sitemap|rss|health).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]

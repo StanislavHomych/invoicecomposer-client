@@ -2,7 +2,20 @@
 // In development, use relative path to leverage Vite proxy (empty string = relative)
 // In production, use VITE_API_URL if set (for separate deployments), otherwise use relative path
 // For separate client/server deployments, set VITE_API_URL to your server URL
-const API_URL = import.meta.env.VITE_API_URL || '';
+// Get API URL with proper formatting (no trailing slash)
+const getApiUrl = () => {
+  const envUrl = import.meta.env.VITE_API_URL;
+  if (envUrl) {
+    // Remove trailing slash if present
+    return envUrl.replace(/\/$/, '');
+  }
+  // Production fallback - use server URL
+  if (import.meta.env.PROD) {
+    return 'https://invoicecomposer-server.vercel.app';
+  }
+  return '';
+};
+const API_URL = getApiUrl();
 
 export interface ApiError {
   error: string;
