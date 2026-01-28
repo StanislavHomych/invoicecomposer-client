@@ -1,11 +1,19 @@
-import { sitemapRoutes } from '../src/sitemapRoutes';
+import { sitemapRoutes } from './_sitemapRoutes';
 
 // Minimal declaration so we can use process.env here without pulling full Node types
 declare const process: {
   env: Record<string, string | undefined>;
 };
 
-function getBaseUrl() {
+function getHeader(req: any, name: string): string | undefined {
+  const key = name.toLowerCase();
+  const headers = req?.headers ?? {};
+  const value = headers[key] ?? headers[name];
+  if (Array.isArray(value)) return value[0];
+  return typeof value === 'string' ? value : undefined;
+}
+
+function getBaseUrl(req: any) {
   if (process.env.SITE_URL) {
     return process.env.SITE_URL.replace(/\/+$/, '');
   }
@@ -14,12 +22,16 @@ function getBaseUrl() {
     return `https://${process.env.VERCEL_URL}`.replace(/\/+$/, '');
   }
 
-  // Fallback for local development
-  return 'http://localhost:5173';
+  // Try to derive from request (works on Vercel even without env vars)
+  const host = getHeader(req, 'x-forwarded-host') ?? getHeader(req, 'host');
+  const proto = getHeader(req, 'x-forwarded-proto') ?? 'https';
+  if (host) return `${proto}://${host}`.replace(/\/+$/, '');
+
+  return 'https://localhost';
 }
 
 export default function handler(req: any, res: any) {
-  const baseUrl = getBaseUrl();
+  const baseUrl = getBaseUrl(req);
 
   const urlsXml = sitemapRoutes
     .map((path) => {
