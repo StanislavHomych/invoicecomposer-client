@@ -1,4 +1,6 @@
-import { sitemapRoutes } from './_sitemapRoutes';
+// NOTE: This project is ESM ("type": "module"). In Vercel's Node runtime, ESM imports
+// need a file extension at runtime, so we import the compiled .js output explicitly.
+import { sitemapRoutes } from './_sitemapRoutes.js';
 
 // Minimal declaration so we can use process.env here without pulling full Node types
 declare const process: {
