@@ -52,6 +52,10 @@
   ],
   "rewrites": [
     {
+      "source": "/sitemap.xml",
+      "destination": "/api/sitemap"
+    },
+    {
       "source": "/ads.txt",
       "destination": "/ads.txt"
     },
