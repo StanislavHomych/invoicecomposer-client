@@ -20,14 +20,15 @@ function getBaseUrl(req: any) {
     return process.env.SITE_URL.replace(/\/+$/, '');
   }
 
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`.replace(/\/+$/, '');
-  }
-
   // Try to derive from request (works on Vercel even without env vars)
   const host = getHeader(req, 'x-forwarded-host') ?? getHeader(req, 'host');
   const proto = getHeader(req, 'x-forwarded-proto') ?? 'https';
   if (host) return `${proto}://${host}`.replace(/\/+$/, '');
+
+  // Fallback to Vercel URL (may be a *.vercel.app domain)
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`.replace(/\/+$/, '');
+  }
 
   return 'https://localhost';
 }
