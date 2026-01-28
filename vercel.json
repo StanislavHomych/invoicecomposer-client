@@ -52,6 +52,26 @@
   ],
   "rewrites": [
     {
+      "source": "/ads.txt",
+      "destination": "/ads.txt"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/site.webmanifest",
+      "destination": "/site.webmanifest"
+    },
+    {
+      "source": "/favicon-16x16.png",
+      "destination": "/favicon-16x16.png"
+    },
+    {
+      "source": "/browserconfig.xml",
+      "destination": "/browserconfig.xml"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
